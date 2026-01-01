@@ -1,42 +1,253 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --primary-white: #e2ddec;
+  --primary-purple: #5b3b8c;
+  --light-purple: #9c89ba;
+  --primary-black: #1a1d1a;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: var(--primary-white);
+  color: var(--primary-black);
+}
+
+/* App wrapper so dark mode can change background */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-dark {
+  background: #15121f;
+  color: var(--primary-white);
+}
+
+.app-dark .top-nav,
+.app-dark .site-footer {
+  background: #241a3a;
+  border-color: #4a347a;
+}
+
+.app-dark .friend-card {
+  background: #342257;
+}
+
+/* Top nav (NavBar) */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background: #e8ddfb;
+  border-bottom: 2px solid #c8b6f3;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--primary-purple);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-icon {
+  font-size: 28px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main-menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--primary-black);
+  font-weight: 500;
 }
 
-.card {
-  padding: 2em;
+.main-menu a:hover {
+  color: #000000;
 }
 
-.read-the-docs {
-  color: #888;
+.main-menu .btn-primary {
+  margin-left: 24px;
 }
+
+/* Generic purple button */
+.btn-primary {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: var(--primary-purple);
+  color: var(--primary-white);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #7b4ccf;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 260px;
+  background-image: url("https://miro.medium.com/1*bD9nGMBuGWBdawdmrMmzVA.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Search button in hero */
+.search-game-btn {
+  padding: 18px 64px;
+  border-radius: 40px;
+  border: none;
+  background: var(--primary-purple);
+  color: var(--primary-white);
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.search-game-btn:hover {
+  background: #7b4ccf;
+}
+
+/* Friends suggestions section */
+.friends-suggest {
+  padding: 40px 60px 60px;
+  text-align: center;
+}
+
+.friends-suggest h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+  color: var(--primary-purple);
+}
+
+.friends-subtitle {
+  margin: 0;
+  color: #4a3f64;
+}
+
+.favorites-counter {
+  margin: 12px 0 24px;
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.friend-cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual friend card */
+.friend-card {
+  position: relative;
+  width: 230px;
+  padding: 28px 24px 32px;
+  background: var(--primary-purple);
+  border-radius: 24px;
+  color: var(--primary-white);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.friend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Visual change when card is favorite */
+.friend-card-favorite {
+  outline: 3px solid gold;
+}
+
+/* plus / star icon */
+.add-icon {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: 22px;
+}
+
+/* Avatars */
+.TSavatar,
+.Sojoavatar,
+.Libavatar {
+  width: 100%;
+  height: 130px;
+  border-radius: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.TSavatar {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLHt3wnjLO5_PLKV9gkOVahcRMpAyVhqYkSQ&s");
+}
+
+.Sojoavatar {
+  background-image: url("https://images-cdn.ubuy.uy/67c67aee956c7d4af62e5746-hambo-marcy-039-s-bear-handmade-soft.jpg");
+}
+
+.Libavatar {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEs7Bhx0_uVhsUXcb0Lm49uj1cZvKdm40Lng&s");
+}
+
+.friend-card h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.friend-card p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: auto;
+  padding: 10px 48px;
+  background: #e8ddfb;
+  border-top: 2px solid #c8b6f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.socials a {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  color: var(--primary-white);
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  text-decoration: none;
+  font-size: 12px;
+}
+

@@ -1,0 +1,221 @@
+:root {
+    --primary-white: #E2DDEC;
+    --primary-purple: #5B3B8C;
+    --light-purple: #9C89BA;
+    --primary-black: #1A1D1A;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--primary-white);
+    color: var(--primary-black);
+  }
+  
+  /* Top nav */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    background: #e8ddfb;
+    border-bottom: 2px solid #c8b6f3;
+  }
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: #7b4ccf;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #3a3350;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #1A1D1A;
+  }
+  .navbar .btn-primary :hover {
+    color: #7b4ccf;
+  }
+  
+  .navbar .btn-primary {
+    background-color: #7b4ccf;
+    border-color: #7b4ccf;
+    border-radius: 20px;
+    padding: 6px 18px;
+  }
+  
+  /* Dark icon on light background */
+  .navbar-toggler {
+    border-color: var(--primary-white);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2858,51,80, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-purple);
+  }
+  
+  .logo-icon {
+    font-size: 28px;
+  }
+  
+  .main-menu a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--primary-black);
+    font-weight: 500;
+  }
+  
+  .main-menu a.btn-primary {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: var(--primary-purple);
+    color: var(--primary-white);
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 260px;
+    background-image: url("https://miro.medium.com/1*bD9nGMBuGWBdawdmrMmzVA.png"); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*Search button*/
+  .search-game-btn {
+    padding: 18px 64px;
+    border-radius: 40px;
+    border: none;
+    background: var(--primary-purple);
+    color: var(--primary-white);
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  /* Friends suggestions */
+  .friends-suggest {
+    padding: 40px 60px 60px;
+    text-align: center;
+  }
+  
+  .friends-suggest h1 {
+    font-size: 42px;
+    margin-bottom: 32px;
+    color: var(--primary-purple);
+  }
+  
+  .friend-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .friend-card {
+    position: relative;
+    width: 230px;
+    padding: 28px 24px 32px;
+    background: var(--primary-purple);
+    border-radius: 24px;
+    color: var(--primary-white);
+  }
+  
+  .add-icon {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-size: 22px;
+  }
+  
+  .TSavatar{
+    width: 100%;
+    height: 130px;
+    border-radius: 16px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLHt3wnjLO5_PLKV9gkOVahcRMpAyVhqYkSQ&s");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin-bottom: 20px;
+  }
+  .Sojoavatar {
+    width: 100%;
+    height: 130px;
+    border-radius: 16px;
+    background: url("https://images-cdn.ubuy.uy/67c67aee956c7d4af62e5746-hambo-marcy-039-s-bear-handmade-soft.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin-bottom: 20px;
+  }
+  .Libavatar{
+    width: 100%;
+    height: 130px;
+    border-radius: 16px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEs7Bhx0_uVhsUXcb0Lm49uj1cZvKdm40Lng&s");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin-bottom: 20px;
+  }
+  
+  .friend-card h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .friend-card p {
+    margin: 4px 0 0;
+    font-size: 14px;
+  }
+  
+  /* Footer */
+  .site-footer {
+    margin-top: 40px;
+    padding: 10px 48px;
+    background: #e8ddfb;
+    border-top: 2px solid #c8b6f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .socials a {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary-purple);
+    color: var(--primary-white);
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
